@@ -1,0 +1,20 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us.gcr.io/ct-admin-project/capitaltyping/order-management:$COMMIT_SHA', '.']
+# Push the image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us.gcr.io/ct-admin-project/capitaltyping/order-management:$COMMIT_SHA']
+# Deploy image to GKE platform now
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - '--namespace=staging'
+  - 'set'
+  - 'image'
+  - 'deployment/order-management'
+  - 'user-management=us.gcr.io/ct-admin-project/capitaltyping/order-management:$COMMIT_SHA'
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-east1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=capitaltyping'
+images:
+  - us.gcr.io/ct-admin-project/capitaltyping/order-management

@@ -1,0 +1,40 @@
+module.exports = {
+
+  screens: {
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
+  },
+  theme: {
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+      'roboto': ['Roboto', 'sans-serif']
+    },
+    extend: {
+      colors: {
+        blue: {
+          light: '#F3F7FF',
+          medium: '',
+          dark: '#4489FE',
+        },
+        gray: {
+          light: '#DADCE0',
+          lighter: '#E5E9EE',
+          medium: '#F1F3F4',
+          dark: '#757575',
+          darker: '#767676',
+        },
+        black: {
+          dark: '#212121',
+        },
+        darkLight: '#00000052',
+      },
+    },
+  }
+}

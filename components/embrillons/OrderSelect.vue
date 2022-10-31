@@ -1,0 +1,129 @@
+<template>
+       <div class="custom-select z-[100] text-black-dark" :class="cssClass" :tabindex="tabindex" @blur="open = false">
+              <div class="selected  font-roboto " :class="{ open: open }" @click="open = !open">
+                     {{ selected }}
+              </div>
+              <div class="items  border-[0.5px]  " :class="{ 'selectHide': !open } ">
+
+
+                     <div v-for="(option, i) of options" :key="i" @click="
+                     selected = option;
+                     open = false;
+                     $emit('input', option);
+                     " :class="itemsCss" class="h-[50px]">
+                            {{ option }}
+                     </div>
+              </div>
+       </div>
+</template>
+
+<script>
+
+export default {
+       name: "OrderSelect",
+       props: {
+              options: {
+                     type: Array,
+                     required: true,
+              },
+              default: {
+                     type: String,
+                     required: false,
+                     default: null,
+              },
+              tabindex: {
+                     type: Number,
+                     required: false,
+                     default: 0,
+              },
+              cssClass: {
+                     type: String,
+                     required: true
+              },
+              itemsCss: {
+                     type: String,
+                     required: false
+              },
+              itemsZone: {
+                     type: String,
+                     required: false
+              }
+
+       },
+       data() {
+              return {
+                     selected: this.default
+                            ? this.default
+                            : this.options.length > 0
+                                   ? this.options[0]
+                                   : null,
+                     open: false,
+              };
+       },
+
+};
+</script>
+
+<style scoped>
+.custom-select {
+       position: relative;
+       text-align: left;
+       outline: none;
+       height: 29px;
+       line-height: 47px;
+}
+
+.custom-select .selected {
+       background-color: #ffff;
+       border-radius: 4px;
+
+       padding-left: 1em;
+       cursor: pointer;
+       user-select: none;
+       margin-bottom: 0.2rem;
+}
+
+.custom-select .selected.open {
+       border: 0.5px solid #757575;
+       border-radius: 4px;
+}
+
+.custom-select .selected:after {
+       position: absolute;
+       content: "";
+       top: 22px;
+       right: 1em;
+       width: 0;
+       height: 0;
+       border: 5px solid transparent;
+       border-color: #757575 transparent transparent transparent;
+}
+
+.custom-select .items {
+
+       border-radius: 4px;
+       overflow: hidden;
+
+
+       position: absolute;
+       background-color: white;
+       left: 0;
+       right: 0;
+
+}
+
+.custom-select .items div {
+       color: #212121;
+       padding-left: 1em;
+       cursor: pointer;
+       user-select: none;
+}
+
+.custom-select .items div:hover {
+       background-color: #E9F0FD;
+}
+
+.selectHide {
+       display: none;
+}
+</style>

@@ -1,0 +1,101 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, label, * {
+  font-family: 'Roboto', sans-serif;
+}
+.input-box label {
+    color: #757575;
+    width: fit-content;
+    transform: translate(17px, 11px);
+    font-size: 14px;
+    background: #ffffff;
+}
+
+@layer utilities {
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+}
+
+.d-header {
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    border-style: none;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    height: var(--header-height);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.base-shadow {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+html,
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    width: calc(100% - 6.875rem);
+    padding-top: 6rem;
+}
+
+html {
+    overflow: hidden;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: -10px; /* correct offset on first border spacing if desired */
+}
+td {
+    border: solid 0.5px #dadce0;
+    border-style: solid none;
+    padding: 10px;
+}
+td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+
+:root {
+  --header-height: 4rem;
+  --footer-height: 4rem;
+  --page-height: calc(100vh - 4rem - 4rem);
+}

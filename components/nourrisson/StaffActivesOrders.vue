@@ -1,0 +1,193 @@
+<template>
+    <div class=" w-[500px] py-5 space-y-[45px] flex flex-col bg-white sm:max-w-[500px]">
+        <!-- header -->
+        <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-row justify-between items-center space-x-[18.5px] font-roboto">
+                <div class=" font-roboto  leading-[25.78px] font-[400] text-[22px]">Active orders</div>
+                <div class="flex items-center space-x-[8.5px]">
+                    <div class="font-roboto text-[14px] leading-[16.41px] font-[400] text-[#757575]">Filter</div>
+
+
+                    <div class="icon cursor-pointer w-[20px] h-[20px]" id="dropdownBottomButton"
+                        data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom">
+
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 36h12v-4h-12v4zm0-24v4h36v-4h-36zm0 14h24v-4h-24v4z" fill="#757575" />
+                            <path d="M0 0h48v48h-48z" fill="none" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-[8.5px]">
+                    <span class="font-roboto text-[14px] leading-[16.41px] font-[400] text-[#757575]">Sort</span>
+
+                    <div class="icon cursor-pointer w-[20px] h-[20px]" id="dropdownBottomButton"
+                        data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom">
+
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 36h12v-4h-12v4zm0-24v4h36v-4h-36zm0 14h24v-4h-24v4z" fill="#757575" />
+                            <path d="M0 0h48v48h-48z" fill="none" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- linl to all projects -->
+            <div>
+                <a href="#"
+                    class=" font-[400] text-[#4489FE] text-[14px] leading-[16.41px] float-right font-roboto">All
+                    Projects</a>
+            </div>
+        </div>
+        <!-- list -->
+        <div>
+            <div class="overflow-x-auto relative sm:rounded-lg">
+                <table class="  border-collapse w-full text-sm text-left text-gray-500 ">
+                    <thead class="text-[12px] text-[#212121] font-medium font-roboto  border-b ">
+                        <tr>
+                            <th scope="col" class="py-3">Order Name</th>
+                            <th scope="col" class="py-3 px-6">Last Activity</th>
+                            <th scope="col" class="py-3 px-6"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white h-[53.5px]">
+                            <td scope="row"
+                                class="py-0 px-0 font-[400] text-[14px] leading-[16.41px] text-[#212121] font-roboto text-gray-900 whitespace-nowrap ">
+                                <div class="flex">
+                                    <span> English Transcription"</span>
+                                    <span class="external"><svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="py-0 px-6">
+                                <div class="flex items-center">
+
+
+                                    <div class="">
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[#212121] ">New
+                                            Message</span><br />
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[##BDBDBD]">08/24/2019
+                                            02:00 PM</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-0 px-0">
+                                <div class="flex justify-end">
+                                    <button type="button"
+                                        class=" border-[#4489FE] bg-blue-dark w-[46.75px] min-h-[22px] text-white font-[400] text-[12px] leading-[14.06px]  rounded-[4px] hover:cursor-pointer hover:bg-opacity-3 focus:outline-none  transition duration-150  ease-in-out">
+                                        <span class="font-roboto">View</span>
+                                    </button>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr class="bg-white h-[53.5px]">
+                            <td scope="row"
+                                class="py-0 px-0 font-[400] text-[14px] leading-[16.41px] text-[#212121] font-roboto text-gray-900 whitespace-nowrap ">
+                                <div class="flex">
+                                    <span> English Transcription"</span>
+                                    <span class="external"><svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="py-0 px-6">
+                                <div class="flex items-center">
+
+
+                                    <div class="">
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[#212121] ">New
+                                            Message</span><br />
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[##BDBDBD]">08/24/2019
+                                            02:00 PM</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-0 px-0">
+                                <div class="flex justify-end">
+                                    <button type="button"
+                                        class=" border-[#4489FE] bg-blue-dark w-[46.75px] min-h-[22px] text-white font-[400] text-[12px] leading-[14.06px]  rounded-[4px] hover:cursor-pointer hover:bg-opacity-3 focus:outline-none  transition duration-150  ease-in-out">
+                                        <span class="font-roboto">View</span>
+                                    </button>
+                                </div>
+
+
+                            </td>
+                        </tr>
+                        <tr class="bg-white h-[53.5px]">
+                            <td scope="row"
+                                class="py-0 px-0 font-[400] text-[14px] leading-[16.41px] text-[#212121] font-roboto text-gray-900 whitespace-nowrap ">
+                                <div class="flex">
+                                    <span> English Transcription"</span>
+                                    <span class="external"><svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="py-0 px-6">
+                                <div class="flex items-center">
+
+
+                                    <div class="">
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[#212121] ">New
+                                            Message</span><br />
+                                        <span class="font-roboto text-[11px] leading-[24px] text-[##BDBDBD]">08/24/2019
+                                            02:00 PM</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-0 px-0">
+                                <div class="flex justify-end">
+                                    <button type="button"
+                                        class=" border-[#4489FE] bg-blue-dark w-[46.75px] min-h-[22px] text-white font-[400] text-[12px] leading-[14.06px]  rounded-[4px] hover:cursor-pointer hover:bg-opacity-3 focus:outline-none  transition duration-150  ease-in-out">
+                                        <span class="font-roboto">View</span>
+                                    </button>
+                                </div>
+
+
+                            </td>
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "StaffActivesOrders",
+};
+</script>
+
+
+<style scoped>
+tr th,
+tr td {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.external {
+    width: 20px;
+    height: 20px;
+    color: #4489fe;
+    padding-left: 0.4rem;
+    cursor: pointer;
+}
+</style>
